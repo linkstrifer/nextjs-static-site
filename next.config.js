@@ -1,6 +1,6 @@
 const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
-  // Use the CDN in production and localhost for development.
-  assetPrefix: isProd ? "http://strifer.link/nextjs-static-site/" : "",
+  basePath: isProd ? "/nextjs-static-site" : "",
+  assetPrefix: isProd ? "/nextjs-static-site/" : "",
 };
