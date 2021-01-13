@@ -1,11 +1,13 @@
 import fs from "fs";
 import Link from "next/link";
 
+import styles from "../../styles/Home.module.css";
+
 const pathsData = JSON.parse(fs.readFileSync("data.json"));
 
 function Page({ content, locale, path, alternateLocales }) {
   return (
-    <div style={{ margin: "auto", maxWidth: "400px" }}>
+    <div className={styles.container}>
       <h1>{locale.toUpperCase()}</h1>
       <p>
         Other locales:
